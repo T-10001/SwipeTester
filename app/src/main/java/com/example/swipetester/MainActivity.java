@@ -8,6 +8,7 @@ import android.graphics.Point;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.view.GestureDetectorCompat;
 import android.view.Display;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -34,8 +35,8 @@ import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
 import com.google.android.exoplayer2.util.Util;
 
-import androidx.annotation.NonNull;
-import androidx.core.view.GestureDetectorCompat;
+//import androidx.annotation.NonNull;
+//import androidx.core.view.GestureDetectorCompat;
 //import androidx.core.view.GestureDetectorCompat;
 
 import static com.google.android.exoplayer2.DefaultRenderersFactory.EXTENSION_RENDERER_MODE_ON;
@@ -44,7 +45,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
 
 	private GestureDetectorCompat mDetector;
 	private TextView textView;
-	private PlayerView playerView;
+	private MyPlayerView playerView;
 
 	private ExoPlayer player;
 
@@ -80,6 +81,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
 		// attaching player to a view
 		// when playerView not set with SimpleExoPlayer, scroll gesture works normally
 		playerView.setPlayer(player);
+
 
 	}
 
